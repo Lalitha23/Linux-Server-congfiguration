@@ -72,14 +72,13 @@
   * sudo mkdir catalog
   * cd catalog
   * sudo mkdir static templates
-  * sudo nano __init__.py
-  
-    <code> from flask import Flask
-app = Flask(__name__)
-@app.route("/")
-def hello():
-    return "Hello, world (Testing!)"
-if __name__ == "__main__":
+  * sudo nano __init__.py  
+  <code> from flask import Flask  
+     app = Flask(__name__)  
+@app.route("/")  
+def hello():  
+    return "Hello, world (Testing!)"  
+if __name__ == "__main__":  
 app.run() </code>
 * **Install Flask**
   * sudo apt-get install python-pip
