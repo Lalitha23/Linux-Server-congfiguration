@@ -73,8 +73,8 @@
   * cd catalog
   * sudo mkdir static templates
   * sudo nano __init__.py  
-  <code> from flask import Flask  
-     app = Flask(__name__)  
+  <code> from flask import Flask</code>   
+  <code>app = Flask(__name__)</code>    
 @app.route("/")  
 def hello():  
     return "Hello, world (Testing!)"  
