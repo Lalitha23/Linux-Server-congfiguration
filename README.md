@@ -65,7 +65,7 @@
 * **install python dev and verify WSGI is enabled**
   * Install python-dev packagesudo apt-get install python-dev
   * Verify wsgi is enabled sudo a2enmod wsgi
-* ** Create flask app taken from digitalocean**
+* **Create flask app taken from digitalocean**
   * cd /var/www
   * sudo mkdir webapp
   * cd catalog
