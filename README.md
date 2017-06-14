@@ -53,3 +53,48 @@
   * Change PasswordAuthentication from yes back to no. nano /etc/ssh/sshd_config
   * save file(nano: ctrl+x, Y, Enter)
   * login with key pair: ssh grader@Public-IP-Address* -p 2200 -i ~/.ssh/project5
+* **Install and configure Apache to serve a Python mod_wsgi application**
+  * sudo apt-get install apache2 Check if "It works!" at you public IP address given during setup.
+  * install mod_wsgi: sudo apt-get install libapache2-mod-wsgi
+  * configure Apache to handle requests using the WSGI module sudo nano /etc/apache2/sites-enabled/000-default.conf
+  * add WSGIScriptAlias / /var/www/html/myapp.wsgi before </VirtualHost> closing line
+  * save file(nano: ctrl+x, Y, Enter)
+  * Restart Apache sudo apache2ctl restart
+* **install git**
+  * sudo apt-get install git
+* **install python dev and verify WSGI is enabled**
+  * Install python-dev packagesudo apt-get install python-dev
+  * Verify wsgi is enabled sudo a2enmod wsgi
+* ** Create flask app taken from digitalocean**
+  * cd /var/www
+  * sudo mkdir webapp
+  * cd catalog
+  * sudo mkdir catalog
+  * cd catalog
+  * sudo mkdir static templates
+  * sudo nano __init__.py
+  
+    <code> from flask import Flask
+app = Flask(__name__)
+@app.route("/")
+def hello():
+    return "Hello, world (Testing!)"
+if __name__ == "__main__":
+app.run() </code>
+* **Install Flask**
+  * sudo apt-get install python-pip
+  * pip install Flask
+  * Make sure that the test flask __init__.py is working 
+* **Create the wsgi file**
+  * cd /var/www/catalog`
+  * sudo nano catalog.wsgi
+  ''''
+    #!/usr/bin/python
+  import sys
+  import logging
+  logging.basicConfig(stream=sys.stderr)
+  sys.path.insert(0,"/var/www/catalog/")
+
+  from catalog import app as application
+  application.secret_key = 'Add your secret key' ''''
+  
