@@ -92,7 +92,8 @@ app.run() </code>
   <code>import logging</code>    
   <code>logging.basicConfig(stream=sys.stderr)</code>
   <code>sys.path.insert(0,"/var/www/catalog/")</code>  
-
-  from catalog import app as application  
-  application.secret_key = 'Add your secret key' </code>
-  
+  <code>from catalog import app as application</code>    
+  <code>application.secret_key = 'Add your secret key'</code>  
+  * save file(nano: ctrl+x, Y, Enter)
+  * sudo service apache2 restart
+* **Clone Github Repo** 
