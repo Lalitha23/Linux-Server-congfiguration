@@ -87,12 +87,12 @@ app.run() </code>
 * **Create the wsgi file**
   * cd /var/www/catalog`
   * sudo nano catalog.wsgi
-  <code>#!/usr/bin/python
-  import sys
-  import logging
-  logging.basicConfig(stream=sys.stderr)
-  sys.path.insert(0,"/var/www/catalog/")
+  <code>#!/usr/bin/python</code>  
+  <code>import sys</code>    
+  <code>import logging</code>    
+  <code>logging.basicConfig(stream=sys.stderr)</code>
+  <code>sys.path.insert(0,"/var/www/catalog/")</code>  
 
-  from catalog import app as application
+  from catalog import app as application  
   application.secret_key = 'Add your secret key' </code>
   
