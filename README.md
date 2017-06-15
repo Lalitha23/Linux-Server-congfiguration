@@ -3,6 +3,7 @@
 ## Project 7 under the Full Stack Web Developer Nanodegree at Udacity
 
 * public Ip: 34.210.105.100
+* **passphrase: udacity**
 * SSH PORT: 2200
 # Tasks given and method for completion:
 * **Create Linux server on Amazon lightsail**
@@ -53,6 +54,7 @@
   * Change PasswordAuthentication from yes back to no. nano /etc/ssh/sshd_config
   * save file(nano: ctrl+x, Y, Enter)
   * login with key pair: ssh grader@Public-IP-Address* -p 2200 -i ~/.ssh/project5
+  * passphrase for grader: udacity
 * **Install and configure Apache to serve a Python mod_wsgi application**
   * sudo apt-get install apache2 Check if "It works!" at you public IP address given during setup.
   * install mod_wsgi: sudo apt-get install libapache2-mod-wsgi
