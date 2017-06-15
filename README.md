@@ -3,7 +3,7 @@
 ## Project 7 under the Full Stack Web Developer Nanodegree at Udacity
 
 * public Ip: 34.210.105.100
-* **passphrase: udacity**
+* **passphrase for grader: udacity**
 * SSH PORT: 2200
 # Tasks given and method for completion:
 * **Create Linux server on Amazon lightsail**
