@@ -142,4 +142,4 @@ app.run() </code>
   * below the ServerAdmin paste ServerAlias YOURHOSTNAME
   * make sure the virtual host is enabled sudo a2ensite catalog
   * restart apache server sudo service apache2 restart
-  * in your google developer console add your host name and IP address to Authorized Javascript origins. And add YOURHOSTNAME/ouath2callback to the Authorized redirect URIs.
+   in your google developer console add your host name and IP address to Authorized Javascript origins. And add YOURHOSTNAME/ouath2callback to the Authorized redirect URIs.
